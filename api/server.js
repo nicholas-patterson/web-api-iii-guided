@@ -1,16 +1,10 @@
 const express = require("express");
 const server = express();
+const productsRouter = require("../products/productsRouter");
+const suppliersRouter = require("../suppliers/suppliersRouter");
 
-server.get("/products", (req, res) => {
-  res.status(200).json({ api: "running" });
-});
-
-server.get("/clients", (req, res) => {
-  res.status(200).json({ api: "running" });
-});
-
-server.get("/suppliers", (req, res) => {
-  res.status(200).json({ api: "running" });
-});
+// global middleware
+server.use("/products", productsRouter);
+server.use("/suppliers", suppliersRouter);
 
 module.exports = server;

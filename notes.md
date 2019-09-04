@@ -24,3 +24,21 @@ Express APIs are broken up into Express Routers
 1. client makes a request to a server
 
 2. server produces a response and sends it to the client
+
+## Middleware
+
+- can see the request and do something with the information from the request
+- can stop the request and produce a response
+- can do nothing
+- can so the same with the response object
+- **can modify the request and response object**
+
+three types.
+
+- built in: no need to npm install
+- third party: need to install using npm or yarn
+- custom: we build it.
+
+can be used:
+
+- globally with server.use();
